@@ -18,7 +18,7 @@ linkpage/
 
 ## 🧪 Live Preview
 
-<a href="https://rushorgir.github.io/linkpage/" target="_blank">🔗 View Live Site</a>
+>🔗 <a href="https://rushorgir.github.io/linkpage/" target="_blank">View Live Site</a>
 
 
 ## 📸 Screenshot
