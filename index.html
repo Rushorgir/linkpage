@@ -85,17 +85,26 @@
 
   </div>
 
-    <script>
-        function copyEmailToClipboard(event) {
-            event.preventDefault();
+    <div id="toast">Email copied to clipboard!</div>
 
-            const email = "nayyarrushaan@gmail.com";
-            navigator.clipboard.writeText(email).then(() => {
-                alert("Email copied to clipboard!");
-            }).catch(err => {
-                console.error("Failed to copy email: ", err);
-            });
-        }
+    <script>
+    function copyEmailToClipboard(event) {
+        event.preventDefault();
+        const email = "nayyarrushaan@gmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+        showToast();
+        }).catch(err => {
+        console.error("Failed to copy email: ", err);
+        });
+    }
+
+    function showToast() {
+        const toast = document.getElementById("toast");
+        toast.classList.add("show");
+        setTimeout(() => {
+        toast.classList.remove("show");
+        }, 2000); // hide after 2 seconds
+    }
     </script>
 </body>
 </html>

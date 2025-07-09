@@ -86,3 +86,26 @@ p {
   height: 22px;
   stroke: #fff;
 }
+
+#toast {
+  visibility: hidden;
+  min-width: 180px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 12px 20px;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+#toast.show {
+  visibility: visible;
+  opacity: 1;
+}
