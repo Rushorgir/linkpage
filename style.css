@@ -73,7 +73,7 @@ p {
 /* === Icon on the Left === */
 .icon-container {
   position: absolute;
-  left: 16px;
+  left: 8px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
