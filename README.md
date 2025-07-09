@@ -13,6 +13,8 @@ A clean, custom-built Linktree-style landing page made with HTML and CSS.
 ## 📁 Project Structure
 <pre><code>linkpage/
 ├── index.html     # Main HTML file
+├── profile.jpeg   # Profile picture on the website
+├── README.md      # Readme for github
 └── style.css      # All styling and animations
 </code></pre>
 
