@@ -67,7 +67,7 @@
     </a>
 
     <!-- Email -->
-    <button class="link" onclick="copyEmailToClipboard()">
+    <a href="#" class="link" onclick="copyEmailToClipboard(event)">
       <div class="link-content">
         <div class="icon-container">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -81,19 +81,21 @@
         </div>
         <span class="link-text">Email</span>
       </div>
-    </button>
+    </a>
 
   </div>
 
     <script>
-    function copyEmailToClipboard() {
-        const email = "nayyarrushaan@gmail.com";
-        navigator.clipboard.writeText(email).then(() => {
-        alert("Email copied to clipboard!");
-        }).catch(err => {
-        console.error("Failed to copy email: ", err);
-        });
-    }
+        function copyEmailToClipboard(event) {
+            event.preventDefault();
+
+            const email = "nayyarrushaan@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("Email copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy email: ", err);
+            });
+        }
     </script>
 </body>
 </html>
