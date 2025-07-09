@@ -8,36 +8,32 @@
 </head>
 <body>
     <button id="theme-toggle" aria-label="Toggle theme">
-        <!-- Dark mode icon (sunset-2) -->
+        <!-- Moon icon: dark mode (default) -->
         <span id="moon-icon" class="icon active">
-            <svg xmlns="http://www.w3.org/2000/svg" 
-                    width="24" height="24" viewBox="0 0 24 24" 
-                    fill="none" stroke="currentColor" stroke-width="2" 
-                    stroke-linecap="round" stroke-linejoin="round" 
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-sunset-2">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M3 13h1" />
-                <path d="M20 13h1" />
-                <path d="M5.6 6.6l.7 .7" />
-                <path d="M18.4 6.6l-.7 .7" />
-                <path d="M8 13a4 4 0 1 1 8 0" />
-                <path d="M3 17h18" />
-                <path d="M7 20h5" />
-                <path d="M16 20h1" />
-                <path d="M12 5v-1" />
-            </svg>
-        </span>
-
-        <!-- Light mode icon (moon outline) -->
-        <span id="sun-icon" class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" 
-                    width="24" height="24" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" 
-                    stroke-linecap="round" stroke-linejoin="round" 
-                    class="icon-tabler-sun">
+            <!-- new moon (sun outline) -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="icon-tabler-sun">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
                 <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+            </svg>
+        </span>
+
+        <!-- Full sun icon (light mode) -->
+        <span id="sun-icon" class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="currentColor" class="icon-tabler-sun-filled">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M12 18a6 6 0 1 0 0 -12a6 6 0 0 0 0 12z" />
+                <path d="M12 4v-2" />
+                <path d="M12 22v-2" />
+                <path d="M4.93 4.93l-1.42 -1.42" />
+                <path d="M19.07 19.07l-1.42 -1.42" />
+                <path d="M4 12h-2" />
+                <path d="M22 12h-2" />
+                <path d="M4.93 19.07l-1.42 1.42" />
+                <path d="M19.07 4.93l-1.42 1.42" />
             </svg>
         </span>
     </button>
@@ -134,7 +130,7 @@
 
     function showToast() {
         const toast = document.getElementById("toast");
-        
+
         toast.classList.add("show");
         toast.style.animation = "slideDownFade 0.4s ease forwards";
 
@@ -177,4 +173,3 @@
         if (saved) setTheme(saved);
     </script>
 </body>
-</html>

@@ -97,11 +97,14 @@ p {
   width: 22px;
   height: 22px;
   stroke: #fff;
-  transition: stroke 0.4s ease;
 }
 
-.link, h1, p {
+.link, h1, p{
   transition: all 0.4s ease;
+}
+
+.icon {
+  transition: stroke 0.4s ease;
 }
 
 #toast {
@@ -148,7 +151,6 @@ p {
   }
 }
 
-/* === Theme Toggle Button === */
 #theme-toggle {
   position: fixed;
   top: 20px;
@@ -168,6 +170,10 @@ p {
   transition: transform 0.2s ease;
 }
 
+#theme-toggle:hover svg {
+  transform: rotate(15deg);
+}
+
 #theme-toggle .icon {
   display: none;
   width: 28px;
@@ -177,18 +183,21 @@ p {
 
 #theme-toggle .icon.active {
   display: inline-block;
+  transform: rotate(0deg);
 }
 
-#theme-toggle:hover {
-  transform: rotate(15deg);
-  filter: drop-shadow(0 0 8px rgba(0, 182, 170, 0.6)) drop-shadow(0 0 12px rgba(0, 0, 0, 0.4));
-}
-
-
-/* === Light Mode === */
 body.light-mode {
   background: linear-gradient(to bottom, #ffc0cb, #ffffff);
   color: #111;
+}
+
+/* === Buttons === */
+body.light-mode a .icon {
+  stroke: #111 !important;
+}
+body.light-mode #theme-toggle .icon svg {
+  stroke: #fff !important;
+  fill: #fff !important;
 }
 
 body.light-mode .link {
@@ -207,25 +216,13 @@ body.light-mode .link:hover {
   border: 1px solid rgba(255, 192, 203, 0.6);
 }
 
-body.light-mode a .icon {
-  stroke: #111 !important;
-}
-
-body.light-mode #theme-toggle .icon svg {
-  stroke: #111 !important;
-  fill: #111 !important;
-}
-
-body.light-mode #theme-toggle:hover {
-  transform: rotate(15deg);
-  filter: drop-shadow(0 0 8px rgba(255, 192, 203, 0.5)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.6));
-}
-
+/* === Text === */
 body.light-mode h1,
 body.light-mode p {
   text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
 }
 
+/* === Profile Picture === */
 body.light-mode .profile-pic {
   border: 2px solid #ccc;
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
