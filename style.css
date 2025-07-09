@@ -187,7 +187,7 @@ p {
 }
 
 body.light-mode {
-  background: linear-gradient(to bottom, #ffc0cb, #ffffff); /* pink to white */
+  background: linear-gradient(to bottom, #ffc0cb, #ffffff);
   color: #111;
 }
 
@@ -196,26 +196,30 @@ body.light-mode .link {
   background-color: #ffffff;
   color: #111;
   border: 1px solid rgba(255, 192, 203, 0.4);
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.5); /* white base shadow */
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 }
 
 body.light-mode .link:hover {
   background-color: #f5f5f5;
   box-shadow:
-    0 0 8px rgba(255, 192, 203, 0.5),  /* pink glow */
-    0 8px 20px rgba(255, 255, 255, 0.6);  /* white outer glow */
+    0 0 8px rgba(255, 192, 203, 0.5),
+    0 8px 20px rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 192, 203, 0.6);
 }
 
 /* === Text === */
 body.light-mode h1,
 body.light-mode p {
-  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5); /* white text glow */
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
 }
 
 /* === Profile Picture === */
 body.light-mode .profile-pic {
   border: 2px solid #ccc;
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5); /* white base shadow */
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
+}
+
+body.light-mode .icon {
+  stroke: #111;
 }
