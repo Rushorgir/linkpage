@@ -86,3 +86,11 @@ p {
   height: 22px;
   stroke: #fff;
 }
+
+button.link {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
