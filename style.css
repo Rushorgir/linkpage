@@ -38,14 +38,17 @@ p {
 
 /* === Link Buttons === */
 .link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #1f1f1f;
   color: #fff;
   text-decoration: none;
   margin: 12px 0;
   border-radius: 12px;
   transition: all 0.2s ease;
-   padding: 14px 16px 14px 48px;
+  padding: 14px 16px;
+  position: relative;
 }
 
 .link:hover {
@@ -57,25 +60,25 @@ p {
 /* === Flex Layout for Icon + Text === */
 .link-content {
   display: flex;
-  align-items: center;      
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   position: relative;
 }
 
-/* === Icon Container on Left === */
+/* === Icon on the Left === */
 .icon-container {
-  position: absolute;
-  left: 16px;
+  margin-right: 12px;
   display: flex;
   align-items: center;
 }
 
-/* === Centered Text === */
+/* === Link Text Centered === */
 .link-text {
   font-weight: 500;
 }
 
-/* === Icon Sizing === */
+/* === SVG Icon Styling === */
 .icon {
   width: 22px;
   height: 22px;
