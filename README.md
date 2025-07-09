@@ -10,15 +10,20 @@ A clean, custom-built Linktree-style landing page made with HTML and CSS.
 - No frameworks, no JS — just HTML + CSS
 
 
-## 📁 Project Structure
+<pre><code>## 📁 Project Structure
+
+```
 linkpage/
 ├── index.html     # Main HTML file
-└── style.css      # All styling and animations'''
+└── style.css      # All styling and animations
+```
+</code></pre>
+
 
 
 ## 🧪 Live Preview
 
->🔗 <a href="https://rushorgir.github.io/linkpage/" target="_blank">View Live Site</a>
+>🔗 [Live Site](https://rushorgir.github.io/linkpage/)
 
 
 ## 📸 Screenshot
