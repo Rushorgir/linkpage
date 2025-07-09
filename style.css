@@ -7,6 +7,7 @@ body {
   justify-content: center;
   padding: 40px 20px;
   min-height: 100vh;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 .container {
@@ -24,6 +25,7 @@ body {
   margin-bottom: 16px;
   border: 2px solid #444;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
 }
 
 /* === Title and Subtext === */
@@ -96,6 +98,14 @@ p {
   stroke: #fff;
 }
 
+.link, h1, p{
+  transition: all 0.4s ease;
+}
+
+.icon {
+  transition: stroke 0.4s ease;
+}
+
 #toast {
   visibility: hidden;
   min-width: 180px;
@@ -161,4 +171,44 @@ p {
 
 #theme-toggle:hover svg {
   transform: rotate(15deg);
+}
+
+#theme-toggle .icon {
+  display: none;
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+#theme-toggle .icon.active {
+  display: inline-block;
+  transform: rotate(0deg);
+}
+
+body.light-mode {
+  background: linear-gradient(to bottom, #ffc0cb, #ffffff); /* pink to white */
+  color: #111;
+}
+
+body.light-mode .link {
+  background-color: #ffffff;
+  color: #111;
+  border: 1px solid rgba(255, 192, 203, 0.4);
+  box-shadow: 0 4px 12px rgba(255, 192, 203, 0.3);
+}
+
+body.light-mode .link:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 8px 20px rgba(255, 192, 203, 0.4);
+  border: 1px solid rgba(255, 192, 203, 0.6);
+}
+
+body.light-mode h1,
+body.light-mode p {
+  text-shadow: none;
+}
+
+body.light-mode .profile-pic {
+  border: 2px solid #ccc;
+  box-shadow: 0 6px 20px rgba(255, 192, 203, 0.3);
 }

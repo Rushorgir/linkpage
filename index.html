@@ -8,15 +8,29 @@
 </head>
 <body>
     <button id="theme-toggle" aria-label="Toggle theme">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" class="icon-tabler-sun">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-            <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-        </svg>
+        <!-- Moon icon: dark mode (default) -->
+        <span id="moon-icon" class="icon active">
+            <!-- new moon (sun outline) -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="icon-tabler-sun">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+            </svg>
+        </span>
+
+        <!-- Full sun icon (light mode) -->
+        <span id="sun-icon" class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="currentColor" class="icon-tabler-sun-filled">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <!-- rest of the full sun path -->
+                <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" />
+            </svg>
+        </span>
     </button>
-    
+
     <div class="container">
         <img src="profile.jpeg" alt="Profile Picture" class="profile-pic" />
         <h1>@Rushorgir</h1>
@@ -121,6 +135,35 @@
         toast.classList.remove("show");
         }, 2000);
     }
+    </script>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        const moonIcon = document.getElementById('moon-icon');
+        const sunIcon = document.getElementById('sun-icon');
+
+        function setTheme(mode) {
+            if (mode === 'light') {
+                body.classList.add('light-mode');
+                moonIcon.classList.remove('active');
+                sunIcon.classList.add('active');
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.remove('light-mode');
+                sunIcon.classList.remove('active');
+                moonIcon.classList.add('active');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            const current = body.classList.contains('light-mode') ? 'light' : 'dark';
+            setTheme(current === 'light' ? 'dark' : 'light');
+        });
+
+        const saved = localStorage.getItem('theme');
+        if (saved) setTheme(saved);
     </script>
 </body>
 </html>
