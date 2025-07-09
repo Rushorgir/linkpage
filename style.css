@@ -192,6 +192,14 @@ body.light-mode {
 }
 
 /* === Buttons === */
+body.light-mode a .icon {
+  stroke: #111 !important;
+}
+body.light-mode #theme-toggle .icon svg {
+  stroke: #fff !important;
+  fill: #fff !important;
+}
+    
 body.light-mode .link {
   background-color: #ffffff;
   color: #111;
@@ -218,8 +226,4 @@ body.light-mode p {
 body.light-mode .profile-pic {
   border: 2px solid #ccc;
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
-}
-
-body.light-mode .icon {
-  stroke: #111;
 }
