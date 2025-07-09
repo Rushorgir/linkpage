@@ -107,8 +107,6 @@ p {
 
 #toast.show {
   visibility: visible;
-  opacity: 1;
-  animation: slideDownFade 0.4s ease forwards;
 }
 
 @keyframes slideDownFade {
@@ -119,5 +117,16 @@ p {
   100% {
     opacity: 1;
     transform: translate(-50%, 0);
+  }
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
   }
 }

@@ -100,7 +100,14 @@
 
     function showToast() {
         const toast = document.getElementById("toast");
+        
         toast.classList.add("show");
+        toast.style.animation = "slideDownFade 0.4s ease forwards";
+
+        setTimeout(() => {
+        toast.style.animation = "slideUpFade 0.4s ease forwards";
+        }, 1600);
+
         setTimeout(() => {
         toast.classList.remove("show");
         }, 2000);
