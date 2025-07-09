@@ -227,3 +227,7 @@ body.light-mode .profile-pic {
   border: 2px solid #ccc;
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
 }
+
+#theme-toggle .icon svg {
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
+}
