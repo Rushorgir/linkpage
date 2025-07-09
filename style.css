@@ -1,11 +1,12 @@
 /* === General Page Styling === */
 body {
-  background-color: #111;
+  background: linear-gradient(to bottom, #00b6aa, #000000);
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
   display: flex;
   justify-content: center;
   padding: 40px 20px;
+  min-height: 100vh;
 }
 
 .container {
