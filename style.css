@@ -38,9 +38,10 @@ p {
 
 /* === Link Buttons === */
 .link {
+  position: relative; /* needed for absolute icon */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* centers text */
   background-color: #1f1f1f;
   color: #fff;
   text-decoration: none;
@@ -48,7 +49,7 @@ p {
   border-radius: 12px;
   transition: all 0.2s ease;
   padding: 14px 16px;
-  position: relative;
+  overflow: hidden;
 }
 
 .link:hover {
@@ -59,16 +60,17 @@ p {
 
 /* === Flex Layout for Icon + Text === */
 .link-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
   position: relative;
+  width: 100%;
+  text-align: center;
 }
 
 /* === Icon on the Left === */
 .icon-container {
-  margin-right: 12px;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
 }
