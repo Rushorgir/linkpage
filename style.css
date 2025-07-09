@@ -1,50 +1,86 @@
+/* === General Page Styling === */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0f0f0f;
+  background-color: #111;
   color: #fff;
+  font-family: 'Segoe UI', sans-serif;
   display: flex;
   justify-content: center;
-  padding: 30px 15px;
+  padding: 40px 20px;
 }
 
 .container {
-  max-width: 480px;
+  max-width: 500px;
   width: 100%;
   text-align: center;
 }
 
+/* === Profile Image === */
 .profile-pic {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #fff;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  border: 2px solid #444;
 }
 
+/* === Title and Subtext === */
 h1 {
-  margin: 10px 0;
   font-size: 28px;
+  margin-bottom: 8px;
 }
 
 p {
-  font-size: 15px;
+  font-size: 16px;
   color: #aaa;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
+/* === Link Buttons === */
 .link {
   display: block;
   background-color: #1f1f1f;
   color: #fff;
   text-decoration: none;
-  padding: 15px;
   margin: 12px 0;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  padding: 14px 16px;
 }
 
 .link:hover {
-  background-color: #333;
+  transform: scale(1.05);
+  background-color: #2a2a2a;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* === Flex Layout for Icon + Text === */
+.link-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+}
+
+/* === Icon Container on Left === */
+.icon-container {
+  position: absolute;
+  left: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* === Centered Text === */
+.link-text {
+  flex: 1;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* === Icon Sizing === */
+.icon {
+  width: 22px;
+  height: 22px;
+  stroke: #fff;
 }
