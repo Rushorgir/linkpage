@@ -231,3 +231,12 @@ body.light-mode .profile-pic {
 #theme-toggle .icon svg {
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
 }
+
+.fade-wrapper {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.fade-wrapper.fade-out {
+  opacity: 0;
+}
