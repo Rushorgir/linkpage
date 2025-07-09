@@ -152,13 +152,28 @@ p {
   z-index: 1000;
 }
 
-#theme-toggle svg {
+#theme-toggle .icon svg {
   width: 28px;
   height: 28px;
   stroke: #fff;
-  transition: transform 0.2s ease;
 }
 
-#theme-toggle:hover svg {
+#theme-toggle:hover .icon.active svg {
   transform: rotate(15deg);
+}
+
+#theme-toggle .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+#theme-toggle .icon.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
 }
