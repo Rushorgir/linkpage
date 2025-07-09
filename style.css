@@ -51,16 +51,20 @@ p {
   text-decoration: none;
   margin: 12px 0;
   border-radius: 12px;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
   padding: 14px 16px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 182, 170, 0.2);
 }
 
 .link:hover {
   transform: scale(1.05);
   background-color: #2a2a2a;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 
+    0 0 8px rgba(0, 182, 170, 0.4),
+    0 8px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 182, 170, 0.6); 
 }
 
 /* === Flex Layout for Icon + Text === */
