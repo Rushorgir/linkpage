@@ -10,15 +10,12 @@ A clean, custom-built Linktree-style landing page made with HTML and CSS.
 - No frameworks, no JS — just HTML + CSS
 
 
-<pre><code>## 📁 Project Structure
-
-```
+## 📁 Project Structure
+<pre><code>
 linkpage/
 ├── index.html     # Main HTML file
 └── style.css      # All styling and animations
-```
 </code></pre>
-
 
 
 ## 🧪 Live Preview
