@@ -2,7 +2,6 @@
 
 A clean, custom-built Linktree-style landing page made with HTML and CSS.
 
-
 ## 🚀 Features
 
 - Responsive layout for all screen sizes
@@ -14,12 +13,12 @@ A clean, custom-built Linktree-style landing page made with HTML and CSS.
 ## 📁 Project Structure
 linkpage/
 ├── index.html     # Main HTML file
-└── style.css      # All styling and animations
+└── style.css      # All styling and animations'''
 
 
 ## 🧪 Live Preview
 
-> 🔗 [https://rushorgir.github.io/linkpage/](https://rushorgir.github.io/linkpage/)
+<a href="https://rushorgir.github.io/linkpage/" target="_blank">🔗 View Live Site</a>
 
 
 ## 📸 Screenshot
